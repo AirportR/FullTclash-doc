@@ -200,3 +200,44 @@ emoji表情源。默认值为TwitterPediaSource。分为web源与本地源。可
 ### subinfo
 
 bot通过 /new 指令添加的订阅会保存在这。不推荐读者自己配置该项。
+
+### ipstack
+
+开启ipv4，ipv6双栈检测。默认关闭(false)，开启后可以检测节点是否支持ipv4和ipv6，代价是检测时间会延长。
+
+> 开启示例：
+>
+> ```yaml
+> ipstack: true
+> ```
+>
+> 关闭示例（默认状态）:
+>
+> ```yaml
+> ipstack: false
+> ```
+
+### localip
+
+本地ip数据库(MaxMind格式)，请将asn数据库与city数据库放入"./resources/databases" 文件夹
+
+### dasn
+
+ASN数据库名称，用于获取AS编号。
+
+### dorg
+
+ASN组织数据库，用于获取组织名称。
+
+### dcity
+
+city数据库名称，用于获取地区代码。
+
+以上四个通常是配套配置：
+
+> ```yaml
+> localip: false
+> dasn: "GeoLite2-ASN.mmdb" 
+> dorg: "GeoLite2-ASN.mmdb"
+> dcity: "GeoLite2-City.mmdb"
+> ```
