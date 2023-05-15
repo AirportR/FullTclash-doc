@@ -15,4 +15,9 @@
 
 ***
 
+* [Bot指令详细说明](bot-zhi-ling-xiang-xi-shuo-ming/README.md)
+  * [/subinfo](bot-zhi-ling-xiang-xi-shuo-ming/subinfo.md)
+  * [/version](bot-zhi-ling-xiang-xi-shuo-ming/version.md)
+  * [/test & /testurl](bot-zhi-ling-xiang-xi-shuo-ming/test-and-testurl.md)
+  * [/help](bot-zhi-ling-xiang-xi-shuo-ming/help.md)
 * [FullTclash 前后端模式设计思想](fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang.md)

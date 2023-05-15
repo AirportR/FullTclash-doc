@@ -51,7 +51,11 @@ bot需要与telegram官方进行网络通讯。在面对某些国家地区（如
 
 连通性测试过程中出现的提示文本，默认值为如下图所示。
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/屏幕截图 2023-04-23 141543.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 > 示例
 >
@@ -64,7 +68,11 @@ bot需要与telegram官方进行网络通讯。在面对某些国家地区（如
 
 节点拓扑测试过程中出现的提示文本，默认值为如下图所示。
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/屏幕截图 2023-04-23 141859.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 > 示例
 >
@@ -79,7 +87,11 @@ bot需要与telegram官方进行网络通讯。在面对某些国家地区（如
 
 速度测试过程中出现的提示文本，默认值为如下图所示。
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/屏幕截图 2023-04-23 142104.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 > 示例:
 >
