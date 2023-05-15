@@ -8,6 +8,7 @@
 * [配置说明](wen-dang/pei-zhi-shuo-ming/README.md)
   * [admin](wen-dang/pei-zhi-shuo-ming/admin.md)
   * [bot](wen-dang/pei-zhi-shuo-ming/bot.md)
+  * [userbot](wen-dang/pei-zhi-shuo-ming/userbot.md)
   * [clash](wen-dang/pei-zhi-shuo-ming/clash.md)
   * [subconvertor](wen-dang/pei-zhi-shuo-ming/subconvertor.md)
   * [image](wen-dang/pei-zhi-shuo-ming/image.md)
