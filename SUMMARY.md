@@ -21,7 +21,7 @@
   * [/topo & /topourl](bot-zhi-ling-xiang-xi-shuo-ming/topo-and-topourl.md)
   * [/speed & /speedurl](bot-zhi-ling-xiang-xi-shuo-ming/speed-and-speedurl.md)
   * [/test & /testurl](bot-zhi-ling-xiang-xi-shuo-ming/test-and-testurl.md)
+  * [/help](bot-zhi-ling-xiang-xi-shuo-ming/help.md)
   * [Page 1](bot-zhi-ling-xiang-xi-shuo-ming/page-1.md)
   * [Page 2](bot-zhi-ling-xiang-xi-shuo-ming/page-2.md)
-  * [/help](bot-zhi-ling-xiang-xi-shuo-ming/help.md)
 * [FullTclash 前后端模式设计思想](fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang.md)
