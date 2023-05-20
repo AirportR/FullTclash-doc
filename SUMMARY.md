@@ -24,5 +24,5 @@
   * [/test & /testurl](bot-zhi-ling-xiang-xi-shuo-ming/test-and-testurl.md)
   * [/help](bot-zhi-ling-xiang-xi-shuo-ming/help.md)
   * [/new](bot-zhi-ling-xiang-xi-shuo-ming/new.md)
-  * [Page 2](bot-zhi-ling-xiang-xi-shuo-ming/page-2.md)
+  * [/share](bot-zhi-ling-xiang-xi-shuo-ming/share.md)
 * [FullTclash 前后端模式设计思想](fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang.md)
