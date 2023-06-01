@@ -250,7 +250,7 @@ async def callback(bot: Client, message: Message) -> bool:
         return True
 ```
 
-### 项目中所定义的变量、方法总览
+### 项目中所定义的变量、方法预览
 
 你可以导入这些方法和变量，就不需要自己造太多轮子了
 
