@@ -289,7 +289,7 @@ from botmodule.init_bot import config
 # 当然 utils.cleaner下也有一个，你用哪个都没问题，和bot有关的配置最好用上面这个
 # from utils.cleaner import config
 
-myconfig = config.config  # 第一个config是实例，第二个config才是成员变量，它是yaml反序列化而来一个字典。
+myconfig = config.config  # 第一个config是实例，第二个config才是成员变量，它是yaml反序列化而来的一个字典。
 ```
 
 4、消息编辑队列 这个用得不是很多。主要是针对编辑同一条消息可能会出现顺序不一致的问题而设计。
