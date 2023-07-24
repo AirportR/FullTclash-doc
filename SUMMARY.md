@@ -24,6 +24,8 @@
   * [/test & /testurl](bot-zhi-ling-xiang-xi-shuo-ming/test-and-testurl.md)
   * [/help](bot-zhi-ling-xiang-xi-shuo-ming/help.md)
   * [/new](bot-zhi-ling-xiang-xi-shuo-ming/new.md)
+  * [/sub](bot-zhi-ling-xiang-xi-shuo-ming/sub.md)
+  * [/invite](bot-zhi-ling-xiang-xi-shuo-ming/invite.md)
   * [/share](bot-zhi-ling-xiang-xi-shuo-ming/share.md)
 * [对接新的测试脚本（高级）](dui-jie-xin-de-ce-shi-jiao-ben-gao-ji.md)
 * [回调功能（高级）](hui-tiao-gong-neng-gao-ji.md)
