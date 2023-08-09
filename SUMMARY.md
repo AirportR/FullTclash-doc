@@ -10,7 +10,7 @@
   * [bot](wen-dang/pei-zhi-shuo-ming/bot.md)
   * [userbot](wen-dang/pei-zhi-shuo-ming/userbot.md)
   * [clash](wen-dang/pei-zhi-shuo-ming/clash.md)
-  * [subconvertor](wen-dang/pei-zhi-shuo-ming/subconvertor.md)
+  * [subconverter](wen-dang/pei-zhi-shuo-ming/subconverter.md)
   * [image](wen-dang/pei-zhi-shuo-ming/image.md)
   * [杂项](wen-dang/pei-zhi-shuo-ming/za-xiang.md)
 
