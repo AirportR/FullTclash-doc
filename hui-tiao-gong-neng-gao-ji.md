@@ -199,16 +199,34 @@ def is_in_blacklist(url: str) -> bool:
 import time
 
 from pyrogram.types import Message
+from pyrogram.errors import UserNotParticipant
 from pyrogram import Client
-from botmodule import invite
+
+# from botmodule import invite  # 3.5.9(包括)以前的invite接口
+from botmodule import task_handler  # 3.6.0以上新版invite接口，低于此版本请勿启用
 from botmodule.init_bot import reloadUser  # 拿到用户名单
 from utils import message_delete_queue as mdq  # 消息定时删除队列，调用 mdq.put(message, 5)将在5秒后删除消息
 from utils.cleaner import ArgCleaner
 from utils.check import get_telegram_id_from_message
 
-group_whitelist = []  # 群组id白名单，只有在名单的群组 /invite指令才有效
+group_whitelist = [-1001542230803]  # 群组id白名单，只有在名单的群组 /invite指令才有效
 cooling_queue = {}
-cooling_interval = 60  # 调用invite的冷却时间
+cooling_interval = 1  # 调用invite的冷却时间，单位秒
+GROUP_VERIFY = True  # 需要目标在群里，有些是通过频道关联群组发言，并未加群。若为True则此类情况将拒绝测试。
+
+
+async def user_is_in_group(message: Message) -> bool:
+    ID2 = get_telegram_id_from_message(message)
+    if str(ID2).startswith("-100") or message.sender_chat is not None:
+        await message.reply("❌匿名身份无法邀请测试", disable_notification=True)
+        return False
+    if GROUP_VERIFY:
+        try:
+            await message.chat.get_member(message.from_user.id)
+        except UserNotParticipant:
+            await message.reply("❌目标非群组成员，请稍后再试", disable_notification=True)
+            return False
+        return True
 
 
 async def callback(bot: Client, message: Message) -> bool:
@@ -217,37 +235,44 @@ async def callback(bot: Client, message: Message) -> bool:
         # 匹配invite指令，不是的话不走这个回调
         if tgargs[0].startswith('/invite'):
             user = reloadUser()
-            print("群组id:", message.chat.id)
+            print("invite指令触发的群组id:", message.chat.id)
             ID = get_telegram_id_from_message(message)
-            # 用户权限就直接返回了，因为自己本身有权限。
-            if ID in user:
-                return True
             # invite指令需要回复一个目标
             if message.reply_to_message is None:
                 backmsg = await message.reply("请先回复一个目标")
                 mdq.put_nowait((backmsg.chat.id, backmsg.id, 5))
                 return False
+            r_msg = message.reply_to_message
+            # 判断是否已入群
+            if not await user_is_in_group(r_msg):
+                return False
+            # 用户权限就直接返回了，因为自己本身有权限。
+            if ID in user:
+                return True
             if message.chat.id in group_whitelist:
                 if ID in cooling_queue:
                     pre_time = cooling_queue[ID]
                     if time.time() - pre_time < cooling_interval:
                         backmsg = await message.reply(f"❌您在{cooling_interval}秒内发起过测试，请稍后再试~")
-                        mdq.put_nowait((backmsg.chat.id, backmsg.id, 5)) # 旧版本写法，为了兼容3.5.3。用mdq.put(不支持3.5.3)也可以
+                        mdq.put_nowait((backmsg.chat.id, backmsg.id, 5))  # 旧版本写法，为了兼容3.5.3。用mdq.put(不支持3.5.3)也可以
                         return False
                     else:
                         cooling_queue[ID] = time.time()
-                        await invite(bot, message)
+                        await task_handler(bot, message, page=1)  # 3.6.0新版回调，低于此版本请勿启用
+                        # await invite(bot, message)
                         # 这里返回False是因为我们上面已经发起了一个invite，我们不再需要走原来的invite逻辑了，返回True就会触发两个，不信你试试。
                         return False
                 else:
                     cooling_queue[ID] = time.time()
-                    await invite(bot, message)
+                    await task_handler(bot, message, page=1)  # 3.6.0新版回调，低于此版本请勿启用
+                    # await invite(bot, message)
                     return False
         # 匹配invite指令，不是的话不走这个回调
         return True
     except Exception as e:
         print(e)
         return True
+
 ```
 
 ### 项目中所定义的变量、方法预览
@@ -313,6 +338,23 @@ if url is not None:
 ```python
 from utils.cleaner import ArgCleaner
 tgargs = ArgCleaner().getall(message.text)
+print(tgargs)
+# 或者：
+tgargs = ArgCleaner.getarg(message.text)
+
+# 源码展示：
+@staticmethod
+def getarg(string: str, sep: str = ' ') -> list[str]:
+    """
+    对字符串使用特定字符进行切片
+    Args:
+        string: 要切片的字符串
+        sep: 指定用来切片的字符依据，默认为空格
+
+    Returns: 返回一个切好的字符串列表
+
+    """
+    return [x for x in string.strip().split(sep) if x != ''] if string is not None else []
 ```
 
 更多的方法和变量，就自己阅读源码或者手搓吧

@@ -10,7 +10,7 @@
 
 ## 开始编写
 
-可以看看项目中的hbomax、bahamut是咋写的，做到触类旁通就好。 首先分为，三个部分：采集数据函数，后续清洗数据函数、以及创建协程任务，以下为模板。
+可以看看项目中的netflix，tvb是咋写的，做到触类旁通就好。 首先分为，三个部分：采集数据函数，后续清洗数据函数、以及创建协程任务，以下为模板。
 
 * 在addons文件夹下新建一个py文件,如 XXX.py ,xxx是随便取的名字，一般对应流媒体的名字即可。然后在这个文件里编写相关函数。
 * 模块导入
@@ -45,6 +45,7 @@ async def fetch_XXX(Collector, session: aiohttp.ClientSession, proxy=None, recon
         logger.warning("XXX请求发生错误:" + str(c))
         if reconnection != 0:
             await fetch_XXX(Collector, session=session, proxy=proxy, reconnection=reconnection - 1)
+            
     except asyncio.exceptions.TimeoutError:
         logger.warning("XXX请求超时，正在重新发送请求......")
         if reconnection != 0:
@@ -56,6 +57,8 @@ async def fetch_XXX(Collector, session: aiohttp.ClientSession, proxy=None, recon
 * 数据清洗
 
 如果你在采集阶段就得到了测试的结果，那么这步就比较简单。这一步主要是为了获取干净的测试数据
+
+提示：设计数据清洗的目的是为了区分功能，让采集器和清洗器各司其职，而不是让采集器干清洗数据的活。举个例子，假设拿到指定数据需要用到正则匹配，并且操作繁琐，那么应该写成以下这样的函数。采集器需要快速将请求内容输入完毕，这种可能增加时间的活应该先“放着”一边，之后交给清洗器处理。
 
 ```
 def get_XXX_info(ReCleaner):
@@ -85,13 +88,13 @@ def task(Collector, session, proxy):
 
 * 最后的工作
 
-在该脚本的**末尾**，新增一个全局变量 SCRIPT （必须大写）,它是python字典类型。 该变量需要有三个键： "MYNAME": 流媒体名字 "TASK": 协程任务函数名，不加括号 "GET": 获取解锁信息的函数名，不加括号
+在该脚本的**末尾**，新增一个全局变量 SCRIPT （必须大写）,它是python字典类型。 该变量需要有三个键： "MYNAME": 流媒体名字， "TASK": 协程任务函数名，不加括号 "GET": 获取解锁信息的函数名，不加括号
 
 正确范例：
 
 ```python
 SCRIPT = {
-    "MYNAME": "Abema",
+    "MYNAME": "Netflix",
     "TASK": task,
     "GET": get_xxx_info
 }
