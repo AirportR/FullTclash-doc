@@ -2,7 +2,7 @@
 
 首先需要准备以下信息：
 
-* Telegram 的api\_id 、api\_hash [获取地址](https://my.telegram.org/apps) 不会请Google。(部分TG账号已被拉黑，无法正常使用)
+* Telegram 的api\_id 、api\_hash [获取地址](https://my.telegram.org/apps) 不会请Google。(部分TG账号已被拉黑，无法正常使用，尝试更换代理IP)
 *   去 [@BotFather](https://t.me/BotFather) 那里创建一个机器人，获得该机器人的bot\_token，应形如：
 
     bot\_token = "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
@@ -28,7 +28,7 @@ apt install -y git && git clone https://github.com/AirportR/FullTclash.git && cd
 
 ## 环境准备
 
-* Python 3.8 以上(3.11暂时不推荐)
+* Python 3.8 以上(3.12暂时不推荐)
 * 以及各种相关包依赖
 
 您可以用以下命令，在当前项目目录下运行以快速安装环境：
