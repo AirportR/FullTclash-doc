@@ -1,6 +1,14 @@
 # FullTclash 前后端模式设计思想
 
-## &#x20;<a href="#fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang" id="fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang"></a>
+### 2023.11.7更新 <a href="#fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang" id="fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang"></a>
+
+
+
+经过接近半年的实验，userbot在面对**高频率**的转发请求，会极容易触发TG的风控，也就是常说的死号、被ban。因此仅适合个人有多个后端，转发频率不高的使用情景。多人使用极容易暴毙，如果你帐号多，随便玩。🙃
+
+
+
+### 旧话
 
 &#x20;   思来想去，最终还是向这个方向开发。起初我并不想开发所谓的前后端分离，FullTclash在设计之初的定位是 **小众个人向网络代理链测试工具**，毕竟我自己就是个人向的。
 
