@@ -2,6 +2,7 @@
 
 * [FullTclash](README.md)
 * [快速开始](kuai-su-kai-shi.md)
+* [跨平台安装注意事项](kua-ping-tai-an-zhuang-zhu-yi-shi-xiang.md)
 
 ## 文档
 
