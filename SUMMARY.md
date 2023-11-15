@@ -31,3 +31,4 @@
 * [对接新的测试脚本（高级）](dui-jie-xin-de-ce-shi-jiao-ben-gao-ji.md)
 * [回调功能（高级）](hui-tiao-gong-neng-gao-ji.md)
 * [FullTclash 前后端模式设计思想](fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang.md)
+* [WebSocket前后端模式说明](websocket-qian-hou-duan-mo-shi-shuo-ming.md)
