@@ -26,9 +26,7 @@ WebSocket协议是基于TCP的一种网络通信协议。 它实现了客户端�
 
 ### 获取
 
-你可以从FullTclash交流群（邀请链接在频道简介）中获取到premium版本
-
-
+您可以从FullTclash交流群（邀请链接在频道简介）中获取到premium版本
 
 ### 搭建
 
