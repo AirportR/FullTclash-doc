@@ -16,6 +16,7 @@
   * [anti-group](wen-dang/pei-zhi-shuo-ming/anti-group.md)
   * [buildtoken](wen-dang/pei-zhi-shuo-ming/buildtoken.md)
   * [slaveconfig](wen-dang/pei-zhi-shuo-ming/slaveconfig.md)
+  * [userconfig](wen-dang/pei-zhi-shuo-ming/userconfig.md)
   * [杂项](wen-dang/pei-zhi-shuo-ming/za-xiang.md)
 
 ***
