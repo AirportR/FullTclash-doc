@@ -30,7 +30,7 @@ FullTClash有两种对接后端的方式，具体解释详见：
 slaveconfig:
   default-slave: #这个值是固定给本地后端用的，你可以理解为它就是本地后端的配置。
     comment: "本地后端 [meta]" #备注，绘图那里后端显示的值，可以在这里更改
-    shadow: False # 是否隐藏后端，默认不隐藏，即False 。3.6.5新增
+    shadow: false # 3.6.5新增。是否隐藏后端，默认不隐藏，即 false ，想隐藏可以改为 true
 ```
 
 以下为websocket专属配置写法：
