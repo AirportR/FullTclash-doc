@@ -13,6 +13,9 @@
   * [clash](wen-dang/pei-zhi-shuo-ming/clash.md)
   * [subconverter](wen-dang/pei-zhi-shuo-ming/subconverter.md)
   * [image](wen-dang/pei-zhi-shuo-ming/image.md)
+  * [anti-group](wen-dang/pei-zhi-shuo-ming/anti-group.md)
+  * [buildtoken](wen-dang/pei-zhi-shuo-ming/buildtoken.md)
+  * [Page](wen-dang/pei-zhi-shuo-ming/page.md)
   * [杂项](wen-dang/pei-zhi-shuo-ming/za-xiang.md)
 
 ***

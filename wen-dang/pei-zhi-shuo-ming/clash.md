@@ -21,7 +21,34 @@ Linux-x86\_64(亦可称为amd64): fulltclash.so
 >  path: ./libs/fulltclash.so
 > ```
 
-### allow-caching
+3.5.8 更新：
+
+由于动态库加载用在python会产生奇怪的bug，所以重写成了专用的代理客户端，即&#x20;
+
+[FullTCore](https://github.com/AirportR/FullTCore)
+
+此项为其二进制文件的路径。
+
+### branch
+
+3.6.0 加入。用于指定FullTCore代理客户端上游为meta分支，仅有两个有效值： \["origin", "meta"]。
+
+如果不指定为meta分支，那么bot会自动过滤meta支持的新协议。
+
+
+
+注意：指定为meta分支并不意味着你可以测vless等新协议了。你还需要前往FullTCore项目主页获取meta分支编译好的二进制。并且配置好路径
+
+> 示例1:
+>
+> ```yaml
+> clash:
+>   branch: meta # 指定为meta分支
+> ```
+
+### allow-caching (3.6.0起已弃用)
+
+3.6.0改动：已去除本地缓存功能。
 
 是否允许缓存订阅到本地。如果是，则测试过程中的所有订阅将会保存在 ./clash/ 目录下。此项默认为否。
 
@@ -60,7 +87,7 @@ Linux-x86\_64(亦可称为amd64): fulltclash.so
 >  core: 4
 > ```
 
-### auto-start
+### auto-start (3.6.0起已弃用)
 
 自动开启测试监听端口，如果核心数为4，则开启4个监听端口。
 
@@ -75,7 +102,9 @@ bot启动时顺带启动，若为false则需要在 bot上输入 /clash start 手
 >  auto-start: true #自动开启监听。
 > ```
 
-### startup
+### startup (3.6.0起已弃用)
+
+3.6.0开始将自动寻找端口，无需自己指定。
 
 启动的监听端口的起始端口。默认为 1122 。
 
