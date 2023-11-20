@@ -2,13 +2,12 @@
 
 首先需要准备以下信息：
 
-* Telegram 的api\_id 、api\_hash [获取地址](https://my.telegram.org/apps) 不会请Google。(部分TG账号已被拉黑，无法正常使用，尝试更换代理IP)
+* Telegram 的api\_id 、api\_hash [获取地址](https://my.telegram.org/apps) 不会请Google。(部分TG账号已被拉黑，无法正常使用，尝试更换代理IP，IP干净成功率高，用机场节点就自求多福吧🙃)
 *   去 [@BotFather](https://t.me/BotFather) 那里创建一个机器人，获得该机器人的bot\_token，应形如：
 
     bot\_token = "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
 
     这步不会请Google。
-* 字体文件。（可选，可以用默认的）
 
 ## 拉取源码
 
@@ -28,7 +27,7 @@ apt install -y git && git clone https://github.com/AirportR/FullTclash.git && cd
 
 ## 环境准备
 
-* Python 3.8 以上(3.12暂时不推荐)
+* Python 3.9 以上(3.12暂时不推荐)
 * 以及各种相关包依赖
 
 您可以用以下命令，在当前项目目录下运行以快速安装环境：
@@ -68,7 +67,7 @@ apt install -y git && git clone https://github.com/AirportR/FullTclash.git && cd
      # 如果是在中国大陆地区使用，则程序需要代理才能连接上Telegram服务器。写入如下信息：
      proxy: 127.0.0.1:7890 #socks5 替换成自己的代理地址和端口
     ```
-*   代理配置（可选）
+*   HTTP代理配置（可选）
 
     如果是在中国大陆地区使用，可能部分订阅网址无法直接连接。可在config.yaml中写入如下信息：
 
@@ -130,11 +129,11 @@ bot:
 
 等待初始化操作，出现“程序已启动!”字样就说明在运行了。 运行之后和bot私聊指令：
 
-> /clash start 用于启动clash，否则测试结果会全部是N/A。
-
 > /testurl <订阅地址>(clash配置格式)即可开始测试
 
 > /help 可查看所有命令说明
+
+更多用法请查阅文档。
 
 #### 代理客户端编译(高级)
 
@@ -151,7 +150,7 @@ fulltclash-windows-amd64 为 Windows-amd64 所支持的
 
 #### Docker启动
 
-教程文档待更新
+查看项目根目录的 ./docker/ 目录 ，有构建docker镜像的文件。
 
 #### 为程序设置进程守护(Linux)
 
