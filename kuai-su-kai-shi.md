@@ -67,21 +67,17 @@ apt install -y git && git clone https://github.com/AirportR/FullTclash.git && cd
      # 如果是在中国大陆地区使用，则程序需要代理才能连接上Telegram服务器。写入如下信息：
      proxy: 127.0.0.1:7890 #socks5 替换成自己的代理地址和端口
     ```
-*   HTTP代理配置（可选）
+* 代理客户端路径配置
 
-    如果是在中国大陆地区使用，可能部分订阅网址无法直接连接。可在config.yaml中写入如下信息：
+从3.6.5版本开始，不再默认提供代理客户端二进制文件，请自行前往以下网址获取: https://github.com/AirportR/FullTCore/releases\
+下载解压后可以放到 ./bin/ 目录下，比如文件名为 FullTCore ，下面的配置文件这样写：
 
-    ```
-    # 获取订阅时使用代理（可选）
-    proxy: 127.0.0.1:7890 #http 替换成自己的代理地址和端口,注意，此配置与上面的独立分开。
-    ```
-*   自定义buildtoken
+```yaml
+clash:
+ path: "./bin/FullTCore" #这里改成代理客户端文件路径
+```
 
-    buildtoken是构建 ./bin/fulltclash(.exe) 代理客户端二进制文件的编译Token，此token为数据加密密钥，一般来说，用项目自带的编译token在本地运行不会有任何问题，但是如果以前后端模式运行，则主端需要自行编译代理后端的二进制文件，以此用到编译token，这个token需要写入到配置文件里，供主端加密信息。
-
-    ```yaml
-    buildtoken: 12345678ABCDEFG
-    ```
+Windows系统名字后缀名.exe要加上，其他类Unix系统不需要加后缀名。
 
 #### 获取session文件（可选）
 
