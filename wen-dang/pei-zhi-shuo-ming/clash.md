@@ -43,7 +43,19 @@ Linux-x86\_64(亦可称为amd64): fulltclash.so
 >
 > ```yaml
 > clash:
->   branch: meta # 指定为meta分支
+>  branch: meta # 指定为meta分支
+> ```
+
+### cache-time
+
+✨Premium专属配置
+
+允许在内存中缓存测试过程产生的订阅的存活时间，若为0或者负数，则不允许缓存订阅。若为正数，则该值的单位为秒，默认60秒。
+
+> ```yaml
+> 示例:
+> clash:
+>  cache-time: 60
 > ```
 
 ### allow-caching (3.6.0起已弃用)

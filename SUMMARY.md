@@ -22,6 +22,7 @@
 ***
 
 * [Bot指令详细说明](bot-zhi-ling-xiang-xi-shuo-ming/README.md)
+  * [/re](bot-zhi-ling-xiang-xi-shuo-ming/re.md)
   * [/subinfo](bot-zhi-ling-xiang-xi-shuo-ming/subinfo.md)
   * [/version](bot-zhi-ling-xiang-xi-shuo-ming/version.md)
   * [/topo & /topourl](bot-zhi-ling-xiang-xi-shuo-ming/topo-and-topourl.md)
