@@ -38,7 +38,27 @@ Premium版本为已经打包好的编译版本，意味着您不需要配置任�
 
 
 
-### websocket后端对接
+### 后端对接
+
+
+
+基于websocket协议的后端目前支持两种类型，一种为FullTclash纯后端python实现，另一种是MiaoSpeed。
+
+您可以前往MiaoSpeed项目地址进一步了解：
+
+{% embed url="https://github.com/miaokobot/miaospeed" %}
+
+针对原始仓库，FullTclash项目组有它的fork仓库，该仓库的miaospeed将保持最大的兼容性：
+
+{% embed url="https://github.com/AirportR/miaospeed" %}
+
+关于对接Miaospeed后端到FullTclash主端，请参阅这篇文档：
+
+{% content-ref url="jiang-miaospeed-hou-duan-jie-ru-fulltclash.md" %}
+[jiang-miaospeed-hou-duan-jie-ru-fulltclash.md](jiang-miaospeed-hou-duan-jie-ru-fulltclash.md)
+{% endcontent-ref %}
+
+接下来为FullTclash python实现的后端对接指南：
 
 首先您需要搭建一个后端，这个后端所在的机器需要有公网ip或者内网穿透。
 

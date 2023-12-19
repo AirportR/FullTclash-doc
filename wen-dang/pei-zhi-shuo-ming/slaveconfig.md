@@ -8,8 +8,8 @@ description: 后端对接的相关配置
 
 FullTClash有两种对接后端的方式，具体解释详见：
 
-{% content-ref url="../../fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang.md" %}
-[fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang.md](../../fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang.md)
+{% content-ref url="../../fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang-ji-yu-userbot.md" %}
+[fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang-ji-yu-userbot.md](../../fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang-ji-yu-userbot.md)
 {% endcontent-ref %}
 
 以及 Premium 专属的 websocket对接方式：
@@ -30,10 +30,10 @@ FullTClash有两种对接后端的方式，具体解释详见：
 slaveconfig:
   default-slave: #这个值是固定给本地后端用的，你可以理解为它就是本地后端的配置。
     comment: "本地后端 [meta]" #备注，绘图那里后端显示的值，可以在这里更改
-    shadow: false # 3.6.5新增。是否隐藏后端，默认不隐藏，即 false ，想隐藏可以改为 true
+    hidden: false # 3.6.5新增。是否隐藏后端，默认不隐藏，即 false ，想隐藏可以改为 true
 ```
 
-以下为websocket专属配置写法：
+以下为Premium专属的websocket后端类型配置写法：
 
 ```yaml
 slaveconfig:
@@ -43,3 +43,16 @@ slaveconfig:
     public-key: "12345678" #后端解密的通讯token，也叫做通信密钥，密钥不对无法对接成功。
     type: "websocket" #仅有两个有效值：["websocket", "bot"] 这里websocket后端。
 ```
+
+以及Premium专属的Miaospeed后端配置写法：
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>slaveconfig:
+</strong><strong>  "slave2": #第二个后端，此后端为miaospeed类型
+</strong>    address: 127.0.0.1:8765
+    comment: "ws后端 [ws] [meta]" #后端备注，在测试图显示的。
+    public-key: "12345678" # 如果为miaospeed后端类型，则此项对应miaospeed里的token
+    tls: true # 连接miaospeed启用了tls
+    invoker: "1234567890" # miaospeed白名单的botid伪装，不填默认为主端的botid。
+    type: "miaospeed"
+    buildtoken: "11111|22222|33333|44444" #仅当type为miaospeed可用,可以单独给该后端设置buildtoken，这样配置里的默认miaospeed-buildtoken就不会生效。默认不用填
+</code></pre>
