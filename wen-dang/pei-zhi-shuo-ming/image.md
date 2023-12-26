@@ -83,6 +83,26 @@ description: 绘图相关配置
 >   start_y: 0 #纵坐标起始位置
 > ```
 
+✨Premium专属：
+
+防商用水印，invite邀请的临时测试，将附上防商用水印，与上面的水印配置不冲突：
+
+> 示例:
+>
+> ```yaml
+> non-commercial-watermark: #防商用水印，invite测试将附上防商用水印
+>   enable: true #是否启用
+>   text: '请勿用于商业用途' #水印文本，请勿超过49个字符
+>   color: '#000000' #颜色值
+>   alpha: 16 # 透明度, 可用范围(0-255)
+>   font_size: 64 #字体大小
+>   angle: -16.0 #旋转角度
+>   row_spacing: 0 #行距
+>   start_y: 0 #纵坐标起始位置
+>   shadow: true #是否启用盲水印。注意，启用盲水印会导致绘图时间变长，机器性能不行慎用。
+>   trace: true  #是否在水印中追踪发起测试的Telegram用户UID
+> ```
+
 #### background
 
 绘图的背景颜色配置
