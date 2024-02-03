@@ -1,5 +1,9 @@
 # 将MiaoSpeed后端接入FullTclash
 
+### 适用版本
+
+此功能仅在 Premium 版本可用，社区版（即仓库开源版）无此功能。
+
 ### 介绍
 
 MiaoSpeed是一个开源的连通性测试工具，采用Go语言编写，内部代理出站实现基于Clash项目。
