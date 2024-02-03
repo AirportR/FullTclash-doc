@@ -48,10 +48,20 @@ slaveconfig:
     address: 127.0.0.1:8765
     comment: "miao后端" #后端备注，在测试图显示的。
     public-key: "12345678" # 如果为miaospeed后端类型，则此项对应miaospeed里的启动token
+    skip-cert-verify: true #如果你的miaospeed的证书是自签证书，请设置为true，否则无法连接miaospeed。默认值为false，即默认验证证书有效性。
     tls: true # 连接miaospeed启用了tls，即运（传）输层安全
     invoker: "1234567890" # miaospeed白名单的botid伪装，不填默认为主端的botid。默认即可
     type: "miaospeed"
     buildtoken: "11111|22222|33333|44444" #仅当type为miaospeed可用,可以单独给该后端设置buildtoken，这样配置里的默认miaospeed-buildtoken就不会生效。默认不用填
+    miaospeedConfig: #仅当type为miaospeed可用
+      downloadURL: "https://dl.google.com/dl/android/studio/install/3.4.1.0/android-studio-ide-183.5522156-windows.exe" # 自定义测速文件地址
+      stunURL: "udp://stun.ideasip.com:3478" # 自定义UDP类型测试地址
+      downloadDuration: 8 # 测速时长，单位为秒
+      downloadThreading: 4 # 测速线程
+      pingAverageOver: 3 # ping的次数，取平均值
+      pingAddress: "https://cp.cloudflare.com/generate_204" # 自定义URLtest 延迟测试地址（强烈建议写HTTPS前缀）
+      taskRetry: 3 # 任务重试次数
+
 ```
 
 做好以上，就可以启动你的主端bot进行测试了。

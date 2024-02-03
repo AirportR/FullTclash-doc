@@ -89,7 +89,7 @@ slaveconfig:
   "随便写": # 默认后端配置。
     comment: "ws测试后端" # 默认测试后端的备注。
     public-key: "12345678abcdefg" # 后端的通信Token，也叫做通信密钥。密钥不对无法解密信息。
-    type: websocket  #此项指明后端连接类型。仅有两个有效值: ["websocket", "bot"]
+    type: websocket  #此项指明后端连接类型。仅有三个有效值: ["websocket", "bot", "miaospeed"]
     address: "127.0.0.1:8765" # 此项配置为websocket后端专属配置，当type为websocket时才有效，这里填 host:port 格式。
 ```
 
