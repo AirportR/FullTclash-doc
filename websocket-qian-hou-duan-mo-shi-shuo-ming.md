@@ -86,11 +86,12 @@ git clone https://github.com/AirportR/FullTclash.git -b backend
 
 ```yaml
 slaveconfig:
-  "随便写": # 默认后端配置。
-    comment: "ws测试后端" # 默认测试后端的备注。
-    public-key: "12345678abcdefg" # 后端的通信Token，也叫做通信密钥。密钥不对无法解密信息。
-    type: websocket  #此项指明后端连接类型。仅有三个有效值: ["websocket", "bot", "miaospeed"]
-    address: "127.0.0.1:8765" # 此项配置为websocket后端专属配置，当type为websocket时才有效，这里填 host:port 格式。
+  "slave1": #第一个后端，注意这里的名字是随便填的，是为了方便你该配置所标记的。
+    address: 127.0.0.1:8765 #此项配置为websocket后端专属配置，当type为websocket时才有效。后端地址格式为 ip:port ，也可以是 域名:port。
+    comment: "ws后端 [ws] [meta]" #后端备注，在测试图显示的。
+    public-key: "12345678" #后端解密的通讯token，也叫做通信密钥，密钥不对无法对接成功。
+    path: "/don't set a simple path"  #后端ws连接路径，默认为/ ，这里填配置里显示的路径。
+    type: "websocket" #此项指明后端连接类型。仅有三个有效值：["websocket", "bot", "miaospeed"] 这里websocket后端。
 ```
 
 在主端写上以上配置后，就可以在测试选择新的后端了。
