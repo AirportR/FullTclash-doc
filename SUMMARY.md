@@ -39,3 +39,8 @@
 * [FullTclash 前后端模式设计思想（基于Userbot）](fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang-ji-yu-userbot.md)
 * [WebSocket前后端模式说明](websocket-qian-hou-duan-mo-shi-shuo-ming.md)
 * [将MiaoSpeed后端接入FullTclash](jiang-miaospeed-hou-duan-jie-ru-fulltclash.md)
+* [FullTClash Premium 版本](fulltclash-premium-ban-ben/README.md)
+  * [获取](fulltclash-premium-ban-ben/huo-qu.md)
+  * [使用](fulltclash-premium-ban-ben/shi-yong.md)
+  * [额外功能](fulltclash-premium-ban-ben/e-wai-gong-neng.md)
+  * [Premium回调](fulltclash-premium-ban-ben/premium-hui-tiao.md)

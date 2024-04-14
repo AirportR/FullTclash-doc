@@ -68,7 +68,7 @@ Bot拥有等待任务超时机制，超出60s后会取消任务认证，回收�
 
 发送成功示意图：
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 超时效果示意图：
 
