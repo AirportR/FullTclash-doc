@@ -4,30 +4,20 @@
 
 此项在3.5.3版本之前（包含3.5.3），表示一个clash二进制文件。对于此文件，可以从[这里](https://github.com/Dreamacro/clash/releases)下载对应系统架构的二进制文件。
 
-从3.5.4版本开始，此项代表一个动态链接库文件。项目默认提供有该文件，放在 ./libs/ 下 名为：
-
-Windows-x86\_64(亦可称为amd64)：fulltclash.dll
-
-Linux-x86\_64(亦可称为amd64): fulltclash.so
-
-对于以上两个情况，读者不需要自行配置该项，程序会自动识别这两个平台。
-
-对于其他情况，比如读者自行编译了动态库。那么它的值为该动态库的路径。
-
-> 示例:
->
-> ```yaml
-> clash:
->  path: ./libs/fulltclash.so
-> ```
-
-3.5.8 更新：
+3.5.8 以上：
 
 由于动态库加载用在python会产生奇怪的bug，所以重写成了专用的代理客户端，即&#x20;
 
 [FullTCore](https://github.com/AirportR/FullTCore)
 
 此项为其二进制文件的路径。
+
+示例:
+
+```yaml
+clash:
+ path: ./bin/FullTCore
+```
 
 ### branch
 

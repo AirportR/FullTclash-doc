@@ -2,7 +2,7 @@
 description: 订阅转换的部分配置
 ---
 
-# subconvertor
+# subconverter
 
 ⚠️ 此项已经无人维护！
 
@@ -23,9 +23,10 @@ description: 订阅转换的部分配置
 > 示例：
 >
 > ```yaml
-> subconvertor:
+> subconverter:
 >  enable: true #启用订阅转换
 >  host: "127.0.0.1:25500"
+>  tls: True # 告诉bot启用HTTPS安全连接请求
 >  remoteconfig: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini"
 > ```
 
@@ -44,7 +45,7 @@ description: 订阅转换的部分配置
 > 示例：
 >
 > ```yaml
-> subconvertor:
+> subconverter:
 >  include: '' #设置为空。表示不启用。
 >  exclude: '官网|套餐到期|剩余流量'
 > ```
