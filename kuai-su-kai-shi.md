@@ -69,7 +69,9 @@ apt install -y git && git clone https://github.com/AirportR/FullTclash.git && cd
     ```
 * 代理客户端路径配置
 
-从3.6.5版本开始，不再默认提供代理客户端二进制文件，请自行前往以下网址获取: https://github.com/AirportR/FullTCore/releases\
+从3.6.8开始，初次启动将自动下载以下(Windows,MacOS,Linux)(x86\_64,arm64)的二进制文件，无需配置。
+
+当然如果您想手动下载， 请自行前往以下网址获取: [https://github.com/AirportR/FullTCore/releases](https://github.com/AirportR/FullTCore/releases)\
 下载解压后可以放到 ./bin/ 目录下，比如文件名为 FullTCore ，下面的配置文件这样写：
 
 ```yaml
@@ -133,12 +135,11 @@ bot:
 
 #### 代理客户端编译(高级)
 
-FullTclash有专用的代理客户端，存放在 ./bin/下。其中:
+FullTClash有专用的代理客户端，存放在 ./bin/下。初次启动会自动帮您下载（仅限win、linux、darwin）对应平台的二进制文件。
 
-fulltclash-linux-amd64为 Linux-amd64 所支持\
-fulltclash-windows-amd64 为 Windows-amd64 所支持的
+文件的压缩包格式为: **FullTCore\_{版本号}\_{平台}\_{CPU架构}.{压缩包后缀}**
 
-没有所用架构？ 如果没有您所用架构的二进制文件，比如arm64，或者您担心仓库自带的有安全隐患，那么您可以自行编译。
+没有所用架构？ 如果发现没有自动下载，说明没有在仓库中找到您所用架构的二进制文件，比如mips架构，那么您需要自行编译。
 
 在 [此仓库](https://github.com/AirportR/FullTCore) 下有一源码文件为 fulltclash.go ，您需要将该文件自行用Golang编译器编译成二进制文件。
 
@@ -148,9 +149,9 @@ fulltclash-windows-amd64 为 Windows-amd64 所支持的
 
 查看项目根目录的 ./docker/ 目录 ，有构建docker镜像的文件。
 
-#### 为程序设置进程守护(Linux)
+#### 持久化运行
 
-由于Linux系统特性，关闭ssh连接后，前台程序会被关闭。您需要设置进程守护，才能在后台不间断地运行程序。具体方法Google搜索即可。
+您可以用 systemd , screen, pm2 等守护进程的解决方案持久化运行。
 
 ### 交流探讨
 
@@ -161,12 +162,17 @@ fulltclash-windows-amd64 为 Windows-amd64 所支持的
 
 ### 致谢
 
-* [流媒体解锁思路](https://github.com/lmc999/RegionRestrictionCheck)
-* [Clash](https://github.com/Dreamacro/clash)
-* [aiohttp](https://github.com/aio-libs/aiohttp)
-* [pyrogram](https://github.com/pyrogram/pyrogram)
-* [async-timeout](https://github.com/aio-libs/async-timeout)
-* [Pillow](https://github.com/python-pillow/Pillow)
-* [pilmoji](https://github.com/jay3332/pilmoji)
-* [pyyaml](https://github.com/yaml/pyyaml)
-* [requests](https://github.com/psf/requests)
+* [流媒体解锁检测思路](https://github.com/lmc999/RegionRestrictionCheck)
+* [Clash](https://github.com/Dreamacro/clash) ==> [mihomo](https://github.com/MetaCubeX/mihomo) \[GPLv3]
+* [aiohttp](https://github.com/aio-libs/aiohttp) \[Apache2]
+* [pyrogram](https://github.com/pyrogram/pyrogram) \[LGPLv3]
+* [async-timeout](https://github.com/aio-libs/async-timeout) \[Apache2]
+* [Pillow](https://github.com/python-pillow/Pillow) \[HPND]
+* [pilmoji](https://github.com/jay3332/pilmoji) \[MIT]
+* [pyyaml](https://github.com/yaml/pyyaml) \[MIT]
+* [APScheduler](https://github.com/agronholm/apscheduler) \[MIT]
+* [loguru](https://github.com/Delgan/loguru) \[MIT]
+* [geoip2](https://github.com/maxmind/GeoIP2-python) \[Apache2]
+* [cryptography](https://github.com/pyca/cryptography) \[Apache2] \[BSD3]
+* [google-re2](https://github.com/google/re2) \[BSD3]
+* [aiohttp\_socks](https://github.com/romis2012/aiohttp-socks) \[Apache2]
