@@ -36,7 +36,7 @@
   * [/checkslave](bot-zhi-ling-xiang-xi-shuo-ming/checkslave.md)
 * [对接新的测试脚本（高级）](dui-jie-xin-de-ce-shi-jiao-ben-gao-ji.md)
 * [回调功能（高级）](hui-tiao-gong-neng-gao-ji.md)
-* [FullTclash 前后端模式设计思想（基于Userbot）](fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang-ji-yu-userbot.md)
+* [FullTClash 前后端模式设计思想（基于Userbot）](fulltclash-qian-hou-duan-mo-shi-she-ji-si-xiang-ji-yu-userbot.md)
 * [WebSocket前后端模式说明](websocket-qian-hou-duan-mo-shi-shuo-ming.md)
 * [将MiaoSpeed后端接入FullTClash](jiang-miaospeed-hou-duan-jie-ru-fulltclash.md)
 * [FullTClash Premium 版本](fulltclash-premium-ban-ben/README.md)
