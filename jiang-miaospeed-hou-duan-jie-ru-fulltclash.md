@@ -1,4 +1,4 @@
-# 将MiaoSpeed后端接入FullTclash
+# 将MiaoSpeed后端接入FullTClash
 
 ### 适用版本
 
@@ -57,7 +57,7 @@ slaveconfig:
     invoker: "1234567890" # miaospeed白名单的botid伪装，不填默认为主端的botid。默认即可
     type: "miaospeed"
     branch: "fulltclash" # miaospeed仓库分支，以便内部兼容优化。仅有两个有效值: ["fulltclash", "origin"]，如果你不是用的本项目组的分支fulltclash，请设置为origin
-    buildtoken: "11111|22222|33333|44444" #仅当type为miaospeed可用,可以单独给该后端设置buildtoken，这样配置里的默认miaospeed-buildtoken就不会生效。默认不用填
+    buildtoken: "11111|22222|33333|44444" #仅当type为miaospeed可用,可以单独给该后端设置buildtoken。此项必填，否则会出现测试请求验证失败的提示。
     miaospeedConfig: #仅当type为miaospeed可用
       downloadURL: "https://dl.google.com/dl/android/studio/install/3.4.1.0/android-studio-ide-183.5522156-windows.exe" # 自定义测速文件地址
       stunURL: "udp://stun.ideasip.com:3478" # 自定义UDP类型测试地址
@@ -101,6 +101,6 @@ SCRIPT = {
 
 由于技术以及架构原因，目前并非完美兼容，尤其是与原版的miaospeed的兼容。
 
-如果你使用的是原版miaospeed（即官方编译的版本），那么javascript脚本将不可用，原版miaospeed接入FullTclash仅支持：ping延迟检测、速度测试、拓扑测试(即将支持)。
+如果你使用的是原版miaospeed（即官方编译的版本），那么javascript脚本将不可用，原版miaospeed接入FullTClash仅支持：ping延迟检测、速度测试、拓扑测试(即将支持)。
 
 如果你用的是本项目组的fork仓库编译而来的二进制，那么不会有以上问题。
