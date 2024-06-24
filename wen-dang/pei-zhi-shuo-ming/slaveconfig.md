@@ -58,7 +58,7 @@ slaveconfig:
     invoker: "1234567890" # miaospeed白名单的botid伪装，不填默认为主端的botid。默认即可
     type: "miaospeed"
     branch: "fulltclash" # miaospeed仓库分支，以便内部兼容优化。仅有两个有效值: ["fulltclash", "origin"]，如果你不是用的本项目组的分支fulltclash，请设置为origin
-    buildtoken: "11111|22222|33333|44444" #仅当type为miaospeed可用,可以单独给该后端设置buildtoken，这样配置里的默认miaospeed-buildtoken就不会生效。默认不用填
+    buildtoken: "MIAOKO4|580JxAo049R|GEnERAl|1X571R930|T0kEN" #仅当type为miaospeed可用,可以单独给该后端设置buildtoken，这样配置里的默认miaospeed-buildtoken就不会生效。如果你用的仓库预编译好的二进制，默认填这个，否则无法对接成功
     miaospeedConfig: #仅当type为miaospeed可用
       downloadURL: "https://dl.google.com/dl/android/studio/install/3.4.1.0/android-studio-ide-183.5522156-windows.exe" # 自定义测速文件地址
       stunURL: "udp://stun.ideasip.com:3478" # 自定义UDP类型测试地址
