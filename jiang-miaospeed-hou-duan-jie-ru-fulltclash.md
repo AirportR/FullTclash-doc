@@ -38,7 +38,7 @@ MiaoSpeed是一个开源的连通性测试工具，采用Go语言编写，内部
 ```
 
 ```
--mtls 参数的意思是，miaospeed会使用内部的根证书集进行TLS RTT测试，防止系统根证书劫持造成数据造假，开不开都无所谓，一般建议开。
+-mtls 参数的意思是，miaospeed会使用内部的自签证书进行websocket加密通信，公网一般建议设置。
 更多参数可通过 ./miaospeed server 查看
 ```
 
